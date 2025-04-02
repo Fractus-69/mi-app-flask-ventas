@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Bienvenido a la App de Ventas</h1>
+<p>Aquí verás la tabla de ventas:</p>
+<table class="table">
+    <thead><tr><th>ID</th><th>Fecha</th><th>Cliente</th><th>Producto</th><th>Cantidad</th><th>Precio</th></tr></thead>
+    <tbody>
+    {% for v in ventas %}
+        <tr><td>{{ v[0] }}</td><td>{{ v[1] }}</td><td>{{ v[2] }}</td><td>{{ v[3] }}</td><td>{{ v[4] }}</td><td>{{ v[5] }}</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
